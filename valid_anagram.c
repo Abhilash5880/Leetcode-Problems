@@ -10,21 +10,7 @@ int compare_chars(const void* a, const void* b) {
     return val1 - val2;
 }
 
-/*
-int main() {
-    char word[] = "example";
-    size_t n = strlen(word);
 
-    printf("Original word: %s\n", word);
-
-    // Use qsort to sort the characters
-    qsort(word, n, sizeof(char), compare_chars);
-
-    printf("Sorted word: %s\n", word);
-
-    return 0;
-}
-*/
 bool isAnagram(char* s, char* t) 
 {
     
@@ -41,3 +27,20 @@ bool isAnagram(char* s, char* t)
     }
     return false;
 }
+
+/* 0ms logic
+c
+bool isAnagram(char* s, char* t) {
+    int lenS = strlen(s), lenT = strlen(t);
+    if (lenS != lenT) return false;
+
+    int count[26] = {0};
+    for (int i = 0; i < lenS; i++) {
+        count[s[i] - 'a']++;
+        count[t[i] - 'a']--;
+    }
+    for (int i = 0; i < 26; i++) {
+        if (count[i] != 0) return false;
+    }
+    return true;
+} */
