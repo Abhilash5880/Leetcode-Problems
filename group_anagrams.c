@@ -20,7 +20,7 @@ struct AnagramGroup {
 };
 
 char*** groupAnagrams(char** strs, int strsSize, int* returnSize, int** returnColumnSizes) {
-    struct AnagramGroup *hashTable = NULL, *item;//initializes the has table
+    struct AnagramGroup *hashTable = NULL, *item;//initializes the hash table
     
     // First pass: build the hash table by sorting strings and grouping
     for (int i = 0; i < strsSize; i++) {
