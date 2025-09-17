@@ -5,7 +5,15 @@
  *     struct ListNode *next;
  * };
  */
- 
+#include<stdio.h>
+#include<stdbool.h>
+
+struct ListNode 
+{
+   int val;
+   struct ListNode *next;
+   
+};
 
 int compare_ints(const void *a, const void *b) {
     int arg1 = *(const int*)a;
