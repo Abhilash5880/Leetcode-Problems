@@ -6,6 +6,16 @@
  *     struct TreeNode *right;
  * };
  */
+#include<stdio.h>
+#include<stdbool.h>
+
+struct TreeNode 
+{
+   int val;
+   struct TreeNode *left;
+   struct TreeNode *right;
+};
+
 struct TreeNode* invertTree(struct TreeNode* root){
     // Base case...
     if(root == NULL){

@@ -6,7 +6,15 @@
  *     struct TreeNode *right;
  * };
  */
+#include<stdio.h>
+#include<stdbool.h>
 
+struct TreeNode 
+{
+   int val;
+   struct TreeNode *left;
+   struct TreeNode *right;
+};
 
 // A helper function to find the maximum of two integers
 int max(int a, int b) {
