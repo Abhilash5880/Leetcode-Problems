@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 // Function to find two numbers that sum to the target
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     *returnSize = 2; // We are looking for exactly two indices
@@ -31,9 +31,10 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     free(result); // Free allocated memory
     return NULL;
 }
+*/
 
-/*
-draft 2 (0ms)
+
+//
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     struct hashTable {
         int key;
@@ -67,4 +68,3 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     // If no valid pair is found, return an empty array
     return malloc(sizeof(int) * 0);
 } 
-*/
