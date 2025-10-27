@@ -1,0 +1,33 @@
+Approach 🧠
+Step 1: Build Inorder Index Map
+
+Create a hashmap inmap to store the index of each value in the inorder array.
+This allows ( O(1) ) lookup to find where the root splits the inorder array.
+Step 2: Identify Current Root
+
+The first element in the current preorder range (preorder[preStart]) is always the root of the current subtree.
+Create a new TreeNode with this value.
+Step 3: Find Root Position in Inorder
+
+Use inmap to find the index inRoot of the root value in the inorder array.
+This divides the inorder array into:
+Left subtree: elements from inStart to inRoot - 1
+Right subtree: elements from inRoot + 1 to inEnd
+Step 4: Calculate Left Subtree Size
+
+numsleft = inRoot - inStart gives the number of nodes in the left subtree.
+This helps us determine the preorder range for the left and right subtrees.
+Step 5: Recursively Build Subtrees
+
+Left subtree:
+Preorder range: [preStart + 1, preStart + numsleft]
+Inorder range: [inStart, inRoot - 1]
+Right subtree:
+Preorder range: [preStart + numsleft + 1, preEnd]
+Inorder range: [inRoot + 1, inEnd]
+Step 6: Base Case
+
+If ranges are invalid (inStart > inEnd or preStart > preEnd), return NULL.
+Complexity ⏳
+Time complexity: ( O(n) ) — we visit each node once, and the hashmap allows ( O(1) ) lookup for root positions, where n is the number of nodes.
+Space complexity: ( O(n) ) — for the hashmap storing inorder indices and the recursion stack which can go up to ( O(n) ) in the worst case (skewed tree).
