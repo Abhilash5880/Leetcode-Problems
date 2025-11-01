@@ -1,5 +1,4 @@
-#include<vector>
-#include<stdio.h>
+
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) 
